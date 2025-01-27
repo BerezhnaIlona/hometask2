@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="task_style.css" />
+  </head>
+  <body>
+    <h1>Задача 0</h1>
+
+    <p>Обчислити значення виразів:</p>
+    <ul>
+      <li>
+        <p>S1 = a + 12 + b;</p>
+      </li>
+      <li>
+        <p>S2=√(a+b/2a)</p>
+      </li>
+      <li>
+        <p>S3=∛((a+b)*c)</p>
+      </li>
+      <li>
+        <p>S4=sin⁡(a/-b)</p>
+      </li>
+    </ul>
+    <script>
+      //1. Вводимо необхідні дані
+      const a = parseFloat(prompt("Введіть значення для змінної 'a' ", '0'));
+      const b = parseFloat(prompt("Введіть значення для змінної 'b' ", '0'));
+      const c = parseFloat(prompt("Введіть значення для змінної 'с' ", '0'));
+
+      //2. Знаходимо результат
+      let S1 = a + 12 + b;
+      let S2 = Math.sqrt((a + b) / (2 * a));
+      let S3 = Math.cbrt((a + b) * c).toFixed(2);
+      let S4 = Math.sin(a / -b).toFixed(2);
+
+      //3. Виводимо результат
+      document.write(`
+      S1 = ${S1} <br> 
+      S2 = ${S2} <br> 
+      S3 = ${S3} <br> 
+      S4 = ${S4} 
+      `);
+    </script>
+  </body>
+</html>
